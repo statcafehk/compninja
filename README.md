@@ -1,11 +1,60 @@
-<div align="center">
+# 合数爆破·忍者行动 (Composite Blast: Ninja Action)
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+这是一个面向中小学生的趣味数学 Web 游戏。玩家扮演“数字忍者”，通过切分合数气泡、保护质数气泡来学习和巩固**质数与合数**的概念。
 
-  <h1>Built with AI Studio</h2>
+## 🎮 游戏特色
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+*   **单页应用 (SPA)**：所有代码集成在一个 `index.html` 文件中，极简部署。
+*   **物理引擎交互**：气泡自由漂浮、碰撞，模拟真实的物理效果。
+*   **即时反馈机制**：库库教授（Professor Kuku）会在游戏结束后指出具体的知识盲点。
+*   **无需安装**：使用 CDN 加载 React 和 Tailwind，无需 Node.js 环境即可运行。
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+## 🕹️ 怎么玩
 
-</div>
+1.  **开始游戏**：选择难度（简单/中等/困难）。
+2.  **拆分合数**：点击屏幕上的 **合数**（如 4, 6, 9...），它们会分裂成更小的因数气泡。
+3.  **避开质数**：千万不要点击 **质数**（如 2, 3, 5, 7...），否则会扣分并减少生命值。
+4.  **确认胜利**：当屏幕上剩下的气泡**全部是质数**时，点击底部的 **“确认 ✅”** 按钮。
+    *   ✅ 正确：得分 +2，进入下一轮。
+    *   ❌ 错误：如果还有合数没分完，扣分并减少生命。
+5.  **限时挑战**：每局游戏限时 90 秒！
+
+---
+
+## 🚀 如何部署到 GitHub Pages
+
+由于本项目是单文件应用，部署非常简单，完全免费。
+
+### 第一步：准备仓库
+1. 登录你的 GitHub 账户。
+2. 创建一个新的仓库（Repository），例如命名为 `math-ninja-game`。
+3. 勾选 "Add a README file"（可选）。
+
+### 第二步：上传文件
+1. 进入你创建的仓库页面。
+2. 点击 **Add file** -> **Upload files**。
+3. 将本项目中的 `index.html` 文件拖入上传区域。
+4. 在底部的 Commit changes 处点击 **Commit changes** 按钮。
+
+### 第三步：开启 GitHub Pages
+1. 在仓库页面，点击上方的 **Settings** (设置) 选项卡。
+2. 在左侧菜单栏找到并点击 **Pages**。
+3. 在 **Build and deployment** 部分的 **Source** 下：
+   *   选择 `Deploy from a branch`。
+   *   Branch 选择 `main` (或 master)，文件夹选择 `/(root)`。
+4. 点击 **Save**。
+
+### 第四步：完成
+*   等待约 1-2 分钟，刷新 Pages 设置页面。
+*   顶部会出现一行提示：`Your site is live at...`。
+*   点击那个链接，你的游戏就已经上线了！你可以把链接分享给学生或朋友。
+
+---
+
+## 💻 本地运行
+
+如果你想在自己的电脑上运行：
+
+1. 下载 `index.html` 文件。
+2. **推荐**：使用 VS Code 安装 "Live Server" 插件，右键 `index.html` 选择 "Open with Live Server"。
+   * *注意：直接双击打开 html 文件可能会因为浏览器安全策略（CORS）导致脚本无法加载，建议使用本地服务器方式打开。*
